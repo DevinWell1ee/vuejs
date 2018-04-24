@@ -21,7 +21,6 @@ export default {
 
   props: ['foo'],
 
-  inject: ['testx'],
 
   inheritAttrs: false,
 
