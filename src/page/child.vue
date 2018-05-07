@@ -2,7 +2,7 @@
   <div>
     <div>child</div>
     <button @click="changeFoo">change foo</button>
-    <SubChild v-bind="$attrs"></SubChild>
+    <SubChild v-bind="$attrs" v-on="$listeners"></SubChild>
   </div>
 </template>
 

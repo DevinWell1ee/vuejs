@@ -10,6 +10,12 @@ export default {
 
   created () {
     console.log(this.testx)
+  },
+
+  inheritAttrs: false,
+
+  mounted () {
+    this.$emit('test1')
   }
 }
 </script>
