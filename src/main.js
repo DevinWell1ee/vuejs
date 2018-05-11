@@ -6,6 +6,8 @@ import store from './store/index'
 
 import './assets/style.css'
 
+import './assets/rem.js'
+
 import './filters/index.js'
 import './directives/validate.js'
 

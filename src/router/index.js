@@ -21,6 +21,10 @@ let routes = [
       {
         path: 'mine',
         component: r => require.ensure([], () => r(require('../page/mine')), 'mine')
+      },
+      {
+        path: 'area',
+        component: r => require.ensure([], () => r(require('../page/area')), 'area')
       }
     ]
   }
