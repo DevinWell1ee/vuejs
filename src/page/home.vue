@@ -14,6 +14,10 @@
       :placeholder="username" />
 
     <div @click="toast">popup</div>
+
+    <button @click="changeNumber">change number</button>
+
+    <PDF :url="url" :currentPage="currentPage" :scale="scale" @gainCanvasSize="gainCanvasSize"></PDF>
   </div>
 </template>
 
@@ -22,7 +26,11 @@
 import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
 
+import PDF from '../components/enhanceComponent.vue'
+
 import alert from '../plugins/index.js'
+
+console.log(PDF)
 
 Vue.use(alert)
 
@@ -34,6 +42,14 @@ export default {
   ]),
 
   methods: {
+    gainCanvasSize (payload) {
+      console.log(payload)
+    },
+
+    changeNumber () {
+      this.currentPage += 1
+    },
+
     ...mapActions([
       'addCount',
     ]),
@@ -63,9 +79,16 @@ export default {
   data() {
     return {
       aa: 1,
-      username: ''
+      username: '',
+      url: 'https://cdn.mozilla.net/pdfjs/tracemonkey.pdf',
+      currentPage: 1,
+      scale: 1.5
     }
   },
+
+  components: {
+    PDF
+  }
 
 }
 </script>

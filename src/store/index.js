@@ -7,7 +7,6 @@ Vue.use(Vuex)
 
 import mutations from './mutations'
 import actions from './action'
-console.log(actions)
 
 const state = {
   count: 1,
