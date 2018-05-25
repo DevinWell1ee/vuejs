@@ -29,6 +29,10 @@ let routes = [
       {
         path: 'websocket',
         component: r => require.ensure([], () => r(require('../page/websocket')), 'websocket')
+      },
+      {
+        path: 'life',
+        component: r => require.ensure([], () => r(require('../page/life')), 'life')
       }
     ]
   }
