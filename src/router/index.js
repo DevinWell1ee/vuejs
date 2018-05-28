@@ -33,6 +33,10 @@ let routes = [
       {
         path: 'life',
         component: r => require.ensure([], () => r(require('../page/life')), 'life')
+      },
+      {
+        path: 'render',
+        component: r => require.ensure([], () => r(require('../page/render')), 'render')
       }
     ]
   }

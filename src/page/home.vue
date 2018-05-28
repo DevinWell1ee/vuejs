@@ -17,6 +17,8 @@
 
     <button @click="changeNumber">change number</button>
 
+    <NbButton></NbButton>
+
     <PDF :url="url" :currentPage="currentPage" :scale="scale" @gainCanvasSize="gainCanvasSize"></PDF>
   </div>
 </template>

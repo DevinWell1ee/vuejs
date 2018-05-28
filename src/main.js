@@ -11,6 +11,8 @@ import './assets/rem.js'
 import './filters/index.js'
 import './directives/validate.js'
 
+import './global.js'
+
 new Vue({
   el: '#app',
   router,
