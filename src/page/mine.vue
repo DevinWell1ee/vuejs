@@ -41,7 +41,7 @@ export default {
 
     test1 () {
       console.log('test1')
-      console.log('xxxasdasd')
+      console.log('xxxs')
     }
   },
 
