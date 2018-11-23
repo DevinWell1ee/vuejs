@@ -1,0 +1,136 @@
+{
+  "roots": [{
+    "label": "aa",
+    "children": [
+      {
+        "label": "bb",
+        "children": [
+          {
+            "label": "1231",
+            "children": [
+              {
+                "label": "213123",
+                "children": [
+                  {
+                    "label": "sadasd",
+                    "children": [
+                      {
+                        "label": "dasd",
+                        "children": [
+                          {
+                            "label": "fa"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "saa",
+            "children": [
+              {
+                "label": "12313",
+                "children": [
+                  {
+                    "label": "陆21313",
+                    "children": [
+                      {
+                        "label": "fffg",
+                        "children": [
+                          {
+                            "label": "rfrfr"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "asdas",
+            "children": [
+              {
+                "label": "asdasd",
+                "children": [
+                  {
+                    "label": "112",
+                    "children": [
+                      {
+                        "label": "64645"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "12312",
+        "children": [
+          {
+            "label": "55345",
+            "children": [
+              {
+                "label": "6567"
+              }
+            ]
+          },
+          {
+            "label": "asdasd",
+            "children": [
+              {
+                "label": "adsd",
+                "children": [
+                  {
+                    "label": "asda"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "asd",
+            "children": [
+              {
+                "label": "ad",
+                "children": [
+                  {
+                    "label": "ads1 asd"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "das",
+            "children": [
+              {
+                "label": "d",
+                "children": [
+                  {
+                    "label": "d 1 d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "d",
+            "children": [
+              {
+                "label": "d d d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }]
+}

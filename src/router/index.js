@@ -37,6 +37,14 @@ let routes = [
       {
         path: 'render',
         component: r => require.ensure([], () => r(require('../page/render')), 'render')
+      },
+      {
+        path: 'mind',
+        component: r => require.ensure([], () => r(require('../page/mind')), 'mind')
+      },
+      {
+        path: 'canvas',
+        component: r => require.ensure([], () => r(require('../page/canvas')), 'canvas')
       }
     ]
   }
