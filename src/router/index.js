@@ -23,28 +23,12 @@ let routes = [
         component: r => require.ensure([], () => r(require('../page/mine')), 'mine')
       },
       {
-        path: 'area',
-        component: r => require.ensure([], () => r(require('../page/area')), 'area')
-      },
-      {
-        path: 'websocket',
-        component: r => require.ensure([], () => r(require('../page/websocket')), 'websocket')
-      },
-      {
         path: 'life',
         component: r => require.ensure([], () => r(require('../page/life')), 'life')
       },
       {
         path: 'render',
         component: r => require.ensure([], () => r(require('../page/render')), 'render')
-      },
-      {
-        path: 'mind',
-        component: r => require.ensure([], () => r(require('../page/mind')), 'mind')
-      },
-      {
-        path: 'canvas',
-        component: r => require.ensure([], () => r(require('../page/canvas')), 'canvas')
       }
     ]
   }

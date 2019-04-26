@@ -1,12 +1,17 @@
 <template>
   <div>
-    <p>mine</p>
-
     <input type="text" v-model="iptVal">
+    <hr>
+    <br>
+    <br>
 
     {{test}}
 
     <Child :foo.sync="test" :value="iptVal" :xxx="ss" @test1="test1"></Child>
+
+    <hr>
+    <br>
+    <br>
 
     <Comment></Comment>
   </div>
@@ -25,13 +30,9 @@ export default {
   data () {
     return {
       iptVal: '1',
-      test: true,
+      test: 1,
       ss: 'sadsad'
     }
-  },
-
-  created () {
-
   },
 
   methods: {

@@ -13,6 +13,11 @@ import './directives/validate.js'
 
 import './global.js'
 
+import plugin from './plugins/index.js'
+Vue.use(plugin)
+
+// Vue.prototype.$eventBus = new Vue()
+
 new Vue({
   el: '#app',
   router,

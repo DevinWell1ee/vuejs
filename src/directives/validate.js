@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 Vue.directive('uname', {
   bind () {
     // console.log(1)
@@ -8,7 +9,7 @@ Vue.directive('uname', {
   },
   update (el, binding, vnode) {
     if (!/\w{6,20}/.test(binding.value)) {
-      // console.log('不合法')
+      console.log('不合法')
     }
     // console.log(3)
   },

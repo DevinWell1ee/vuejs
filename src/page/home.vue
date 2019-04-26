@@ -2,9 +2,19 @@
   <div>
     <h1>{{count}}</h1>
 
-    <div @click="changeCount">click event</div>
+    <nb-throttle :time="1000" events="click">
+      <button @click="changeCount">click event</button>
+    </nb-throttle>
+
+    <hr>
+    <br>
+    <br>
 
     {{aa | numberToLetter}}
+
+    <hr>
+    <br>
+    <br>
 
     <input
       type="text"
@@ -13,13 +23,23 @@
       v-on:change="userNameChange"
       :placeholder="username" />
 
-    <div @click="toast">popup</div>
+    <hr>
+    <br>
+    <br>
 
-    <button @click="changeNumber">change number</button>
+    <button @click="toast">popup</button>
 
-    <NbButton></NbButton>
+    <hr>
+    <br>
+    <br>
 
-    <PDF :url="url" :currentPage="currentPage" :scale="scale" @gainCanvasSize="gainCanvasSize"></PDF>
+    <nb-button></nb-button>
+
+    <hr>
+    <br>
+    <br>
+
+    <button @click="goMine">go mine</button>
   </div>
 </template>
 
@@ -28,14 +48,6 @@
 import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
 
-import PDF from '../components/enhanceComponent.vue'
-
-import alert from '../plugins/index.js'
-
-console.log(PDF)
-
-Vue.use(alert)
-
 export default {
   name: 'home',
 
@@ -43,15 +55,13 @@ export default {
     'count'
   ]),
 
+  created () {
+    this.$eventBus.$on('emit-test', (val) => {
+      console.log(val)
+    }, this)
+  },
+
   methods: {
-    gainCanvasSize (payload) {
-      console.log(payload)
-    },
-
-    changeNumber () {
-      this.currentPage += 1
-    },
-
     ...mapActions([
       'addCount',
     ]),
@@ -71,6 +81,12 @@ export default {
       }).then((res)=>{
           console.log(res)
       })
+    },
+
+    goMine () {
+      this.$eventBus.$emit('emit-test', { test: 'emit---' })
+
+      this.$router.push({path: '/mine'})
     }
   },
 
@@ -81,17 +97,9 @@ export default {
   data() {
     return {
       aa: 1,
-      username: '',
-      url: 'https://cdn.mozilla.net/pdfjs/tracemonkey.pdf',
-      currentPage: 1,
-      scale: 1.5
+      username: ''
     }
-  },
-
-  components: {
-    PDF
   }
-
 }
 </script>
 

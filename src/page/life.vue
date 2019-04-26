@@ -1,8 +1,10 @@
 <template>
   <div>
-    parent
-
     <LifeChild :text="text"></LifeChild>
+
+    <hr>
+    <br>
+    <br>
     <button @click="changeText">change text</button>
   </div>
 </template>

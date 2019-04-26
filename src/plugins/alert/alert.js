@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import AlertComponent from './alert.vue'
-import {mergeVdata} from '../util.js'
+import {mergeVdata} from '../../util.js'
 //合并对象函数，这个方法是会改变，第一个参数的值的
 
 let instance

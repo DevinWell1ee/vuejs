@@ -1,3 +1,9 @@
+/**
+ * Action 可以包含任意异步操作。
+ * mutation是同步任务
+ * commit mutations
+ * dispatch actions
+ */
 import Vue from 'vue'
 import Vuex from 'vuex'
 

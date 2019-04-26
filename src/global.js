@@ -11,18 +11,20 @@ function capitalizeFirstLetter(string) {
 
 // webpack require.context(文件夹目录，是否搜索子目录，匹配文件正则表达)
 const requireComponent = require.context(
-  './ui/', false, /\.vue$/
+  './ui/', true, /\.vue$/
    //找到components文件夹下以.vue命名的文件
 )
 
 requireComponent.keys().forEach(fileName => {
   console.log(fileName)
   const componentConfig = requireComponent(fileName)
+  console.log(componentConfig)
 
-  const componentName = capitalizeFirstLetter(
-    fileName.replace(/^\.\//, '').replace(/\.\w+$/, '')
-    //因为得到的filename格式是: './baseButton.vue', 所以这里我们去掉头和尾，只保留真正的文件名
-  )
+  const componentName = componentConfig.name
+  // const componentName = capitalizeFirstLetter(
+  //   fileName.replace(/^\.\//, '').replace(/\.\w+$/, '')
+  //   //因为得到的filename格式是: './baseButton.vue', 所以这里我们去掉头和尾，只保留真正的文件名
+  // )
 
   console.log(componentName)
 

@@ -10,6 +10,7 @@ export default {
 
   created () {
     console.log(this.testx)
+    console.log(this.$attrs)
   },
 
   inheritAttrs: false,
