@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{count}}</h1>
+    <h1 v-nbD>{{count}}</h1>
 
     <nb-throttle :time="1000" events="click">
       <button @click="changeCount">click event</button>
@@ -92,6 +92,12 @@ export default {
 
   mounted () {
 
+  },
+
+  directives: {
+    'nbD': function (el, binding, vnode) {
+      console.log(el.originalPosition)
+    }
   },
 
   data() {

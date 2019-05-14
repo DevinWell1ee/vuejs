@@ -29,6 +29,10 @@ let routes = [
       {
         path: 'render',
         component: r => require.ensure([], () => r(require('../page/render')), 'render')
+      },
+      {
+        path: 'jsx',
+        component: () => import('../page/jsx')
       }
     ]
   }
