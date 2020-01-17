@@ -1,5 +1,11 @@
 <template>
   <div id="root">
+    <router-link to="/">
+      <span>home</span>
+    </router-link>|
+
+    <router-link to="/mine">mine</router-link>
+
     <router-view></router-view>
   </div>
 </template>

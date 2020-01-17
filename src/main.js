@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
 import App from './App'
-import router from './router/index'
-import store from './store/index'
+import router from './router/c-router'
+import store from './store/c-vuex.js'
 
 import './assets/style.css'
 
